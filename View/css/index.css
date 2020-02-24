@@ -102,12 +102,25 @@ hr{
 
     color:black;
 }
+.bar{
+    margin-top: 2em;
+    color:rgba(87, 100, 101,1.0);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .destaque-img{
-    width: 40%;
-    height: 80%;
+
+    width: 20em;
+    box-shadow: 5px 5px 5px black;
+    height: 28em;
     transition-duration: 0.9s;
 }
 .destaque-img:hover{
+    color:white;
     /*animation:girar 2s linear ;*/
 }
 
@@ -124,4 +137,164 @@ hr{
 
 .destaque-bloco .material-icons{
     font-size: 3em;
+}
+.catalogo-bloco .material-icons{
+    font-size: 2.5em;
+}
+#catalogo-bloco{
+    display: table;
+}
+.catalogo-bloco{
+    display:table-cell
+}
+.catalogo-img{
+
+        width: 15em;
+        box-shadow: 5px 5px 5px black;
+        height: 23em;
+        transition-duration: 0.9s;
+    
+}
+.catalogo-img:hover{
+transform:scale(1.2);
+box-shadow: 10px 7px 5px black;
+}
+.catalogo-titulo{
+    font-family: 'Montserrat' ;
+
+}
+#olho{
+    margin-left: 0.3em;
+    position: relative;
+    top: 0.2em;
+    font-size:1em;
+}
+
+#ver-mais{
+    margin-top: 1.5em;
+    text-align: center;
+border:1.5px solid black;
+border-radius: 6px;
+padding: 0.5em 1.2em 0.5em 0.2em;
+    font-weight: bold;
+    font-family: 'Montserrat' ;
+    font-size: 1.5em;
+
+transition-duration: 0.5s;
+}
+#ver-mais:hover{
+    background-color: black;
+    color:white;
+}
+legend{
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Raleway';
+    color:#7f8c8d;
+}
+    fieldset{
+        box-shadow: 5px 5px 5px gray;
+        border-radius: 7px;
+    border: 2px solid rgba(149, 165, 166,1.0);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+fieldset input,textarea{
+    height: 2.2em;
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+        width: 70%;
+}
+fieldset textarea{
+    height: 8em;
+}
+fieldset button{
+    padding:0.5em 0.8em 0.5em 0.8em;
+    background-color: rgba(39, 174, 96,1.0);
+    color:white;
+    font-size: 1.5em;
+    border:0px;
+    border-radius:0.5em;
+    width: 60%;
+}
+#form-button-submit{
+    background-color: rgba(39, 174, 96,1.0);
+
+}
+
+#form-button-reset{
+    background-color: rgba(192, 57, 43,1.0);
+
+}
+#form-msg{
+    height: 8em;
+}
+
+/*
+^^^^^
+
+*/
+
+@media screen and (max-width:1351px) and (min-width: 1090px){
+    body{
+        background-color: blue;
+    }
+    #menu-shop{
+
+        left: 8em;
+    }
+    #menu-login{
+        left: 8em;
+    }
+}
+
+@media screen and (max-width:1088px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+      }
+    #menu-shop{
+
+        left: 1em;
+    }
+    #menu-login{
+        left: 1em;
+    }
+
+  
+
+#main{
+    width: 100vw;
+    background-position: left center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 350%;
+    min-height: 150%;
+    height: 80vh;
+    background-image: url('https://elhumanista.net/wp-content/uploads/2018/09/biblioteca.jpg');
+}
+#main-escuro{
+    box-sizing: content-box;
+    width: 100%;
+    min-height: 100%;
+width: 150vw;
+height: 80vh;
+background-color: rgba(0,0,0,0.5);
+
+}
+#main-text{
+    text-transform: uppercase;
+    font-family: 'Varela Round' ;
+font-style: oblique;   
+ text-shadow: 5px 5px 5px black;;
+padding-top: 1.5em;
+    color:white;
+    z-index: 999;
+    font-size: 5em;
+    width: 150vw;
+}
+
 }

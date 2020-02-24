@@ -1,0 +1,13 @@
+#login{
+position: relative;
+top:4em;
+
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+#cadastro{
+    color:white;
+    background-color: #f1c40f;
+}

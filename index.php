@@ -1,9 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<?php
+$log = 'person_pin';
+if($_GET['status'] == 'successCad'){
+    unset($_GET['status']); 
+
+    session_start();
+    //parâmetro passado pelo model usuário no momento do cadastro
+    $log = "verified_user";
+
+}
+if($_GET['status'] == 'successLog'){
+    unset($_GET['status']); 
+
+    session_start();
+    //parâmetro passado pelo model usuário no momento do Login
+    $log = "verified_user";
+
+}
+if($_GET['status'] == 'successLog'){
+        //parâmetro passado pelo model usuário no momento do login
+
+    echo "<script>alert('Login efetuado com sucesso')</script>";
+    unset($_GET['status']); 
+}
+?>
+
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="https://i.ya-webdesign.com/images/transparent-favicons-books-11.png">
 <meta name="theme-color" content="#95a5a6">
+
 
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,7 +52,7 @@
    <li>  <a class='menu-item' href="View/"><i> Contatos </i></a></li>
 
    <li><a href=""> <i class='menu-item material-icons' id='menu-shop'>shopping_cart</i></a></li>
-   <li><a href="View/login.php"><i class='menu-item material-icons' id='menu-login'>person_pin</i></a></li>
+   <li><a href="View/login.php"><i class='menu-item material-icons' id='menu-login'><?php echo $log; ?></i></a></li>
 </ul>
    
     </nav>

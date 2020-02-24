@@ -239,9 +239,7 @@ fieldset button{
 */
 
 @media screen and (max-width:1351px) and (min-width: 1090px){
-    body{
-        background-color: blue;
-    }
+  
     #menu-shop{
 
         left: 8em;

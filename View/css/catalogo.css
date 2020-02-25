@@ -1,0 +1,74 @@
+.botao{
+    position: relative;
+    top: 9em;
+    font-size:1.4em;
+    color:white;
+    background-color: green;
+    height: 2.5em;
+    border: 0PX;
+    border-radius: 3px;
+    width: 7em;
+    margin-bottom: 5em;
+}
+#atualizar{
+    background-color: gray;
+}
+#remover{
+    background-color: red;
+}
+.fileira-bloco .material-icons{
+    font-size: 2.5em;
+}
+#linha{
+    display:table;
+    top:3em;
+    position: relative;
+    margin-top: 3em;
+}
+
+.fileira-bloco{
+    display: table-cell;
+    position: relative;
+    margin-left: auto;
+    margin-right:auto;
+}
+#b1{
+    right: 5em;
+}
+#b2{
+    left: 5em;
+}
+.fileira-img{
+
+        width: 18em;
+        box-shadow: 5px 5px 5px black;
+        height: 26em;
+        transition-duration: 0.9s;
+    
+}
+.fileira-img:hover{
+transform:scale(1.2);
+box-shadow: 10px 7px 5px black;
+}
+.fileira-titulo{
+    font-family: 'Montserrat' ;
+
+}
+@media screen and (max-width:1088px) {
+
+    
+
+
+.fileira-bloco{
+     left: 0;
+    right: 0;
+    display:block;
+}
+#b1{
+    right: 0em;
+}
+#b2{
+    left: 0em;
+}
+
+}

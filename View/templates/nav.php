@@ -1,8 +1,8 @@
 <?php
 @session_start();
 if($_SESSION['logado']){
-    $log = "verified_user";
-    $linkLogin = "../Controller/ConsultarController.php";
+    $log = 'verified_user';
+    $linkLogin = '../Controller/ConsultarUsuarioController.php';
 
 }else{
     $linkLogin = 'login.php';
@@ -24,19 +24,21 @@ echo "
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='css/index.css'>
     <title>4Vets</title>
+
+<script src='js/menu.js'></script>
 </head>
 <body>
     <nav id='menu'>
-        <ul id='menu-list'>
-   <li>  <a class='menu-item' href='../index.php'><span id='logo'>Sob a Égide</span> </a></li>
-   <li>  <a class='menu-item' href='../index.php'><i> Home </i></a></li>
-   <li>  <a class='menu-item' href='#destaques'><i> Novidades </i></a></li>
-   <li>  <a class='menu-item' href='catalogo.php'><i> Catálogo </i></a></li>
-   <li>  <a class='menu-item' href=''><i> Contatos </i></a></li>
-
-   <li><a href='carrinho.php'> <i class='menu-item material-icons' id='menu-shop'>shopping_cart</i></a></li>
-   <li><a href='".$linkLogin."'><i class='menu-item material-icons' id='menu-login'>".$log."</i></a></li>
-</ul>
+    <ul id='menu-list'>
+    <li>  <a class='menu-item log' href='../index.php'><span id='logo'>Sob a Égide</span> </a> <button class='material-icons retratil button' onclick='retrair()'>menu</button></li> 
+    <li>  <a class='menu-item invisivel' href='../index.php' id='home'><i> Home </i></a></li>
+    <li>  <a class='menu-item invisivel' id='novidades' href='novidades.php'><i> Novidades </i></a></li>
+    <li>  <a class='menu-item invisivel' id='catalogos' href='catalogo.php'><i> Catálogo </i></a></li>
+    <li>  <a class='menu-item invisivel' id='contatos' href='contatos.php'><i> Contatos </i></a></li>
+     
+    <li><a href='carrinho.php'> <i class='menu-item material-icons invisivel' id='menu-shop'>shopping_cart</i></a></li>
+    <li><a href='".$linkLogin."'><i class='menu-item material-icons invisivel' id='menu-login'> ".$log."</i></a></li>
+ </ul>
    
     </nav>
 
@@ -46,5 +48,13 @@ echo "
 <style>
 body{
 margin-top:3.4em;
+
+}
+
+@media screen and (max-width:1088px) {
+    body{
+margin-top:1.4em;
+
+}
 }
 </style>

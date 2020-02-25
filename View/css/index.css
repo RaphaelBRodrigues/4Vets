@@ -93,6 +93,11 @@ padding-top: 1.5em;
     display: table;
   
 }
+#catalogo{
+    width: 100%;
+    display: table;
+  
+}
 hr{
     width: 50%;
 }

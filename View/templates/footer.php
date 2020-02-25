@@ -6,7 +6,7 @@ echo "
 
 <div id='footer'>
     <center>
-Sob a Égide <small> &copy</small>
+<a href='https://raphaelbrodrigues.github.io' target='_blank'>RaphaelBRodrigues</a> <small> &copy</small>
 </center>
 </div>
 </body>

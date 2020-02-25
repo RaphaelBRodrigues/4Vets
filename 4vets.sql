@@ -15,4 +15,11 @@ Hint text not null,
 primary key(UsuarioID)
 );
 
-SELECT * FROM Usuario ;
+
+create table Livro(
+LivroID int auto_increment,
+Titulo varchar(40) not null unique,
+Autor varchar(40) not null,
+Preco int not null,
+primary key(LivroID)
+);

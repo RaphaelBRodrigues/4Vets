@@ -16,7 +16,7 @@ if(i%2 == 1){
     document.getElementById('contatos').classList.remove('invisivel');
     document.getElementById('menu-shop').classList.remove('invisivel');
     document.getElementById('menu-login').classList.remove('invisivel');
-    document.getElementById("menu").style.height = "20em";
+    document.getElementById("menu").style.height = "21em";
 }
 i++;
 

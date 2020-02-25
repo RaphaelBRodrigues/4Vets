@@ -14,7 +14,7 @@ if($_GET['status'] == 'failCad'){
     <link rel="stylesheet" href="css/login.css">
 </head>
 <center>
-<form action="../Controller/CadastroController.php" method='get'>
+<form action="../Controller/CadastroUsuarioController.php" method='get'>
 <fieldset id='login'>
     <legend>Cadastro</legend>
 

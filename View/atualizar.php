@@ -17,7 +17,7 @@ if($_GET['status'] == 'failCad'){
 <fieldset id='login'>
 <legend>Atualizar dados</legend>
 
-<form action="../Controller/AtualizarController.php" method='post'>
+<form action="../Controller/AtualizarUsuarioController.php" method='post'>
 
 
     <input  type="text" name='user' value="<?php echo $_GET['nome']; ?>"><span class='material-icons'>person</span> <br>

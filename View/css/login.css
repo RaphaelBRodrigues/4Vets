@@ -28,3 +28,13 @@ a{
     
 }
 
+@media screen and (max-width:1088px) {
+    #cadastro{
+        width: 70%;
+
+    }
+    #senha{
+    width: 70%;
+    }
+
+}

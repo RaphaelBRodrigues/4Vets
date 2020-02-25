@@ -1,0 +1,40 @@
+#login{
+    position: relative;
+    top:4em;
+    
+    }
+    a{
+        text-decoration: none;
+        color:inherit;
+    }
+    #cadastro{
+        color:white;
+        background-color: green;
+        width: 35%;
+    }
+    #login-button{
+        width: 70%;
+    }
+    #reset{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        width: 35%;
+        font-weight: bold;
+        background-color: red;
+            padding:0.5em 0.8em 0.5em 0.8em;
+            color:white;
+            font-size: 1.5em;
+            border:0px;
+            border-radius:0.5em;
+        
+    }
+    
+    @media screen and (max-width:1088px) {
+        #cadastro{
+            width: 70%;
+    
+        }
+        #senha{
+        width: 70%;
+        }
+    
+    }

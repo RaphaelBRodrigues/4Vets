@@ -14,7 +14,7 @@ $linkLogin = 'View/login.php';
 //echo "<script>alert(".$_SESSION['usrID'].");</script>";
 if($_SESSION['logado'] == 1){
     $log = "verified_user";
-    $linkLogin = "Controller/ConsultarController.php";
+    $linkLogin = "Controller/ConsultarUsuarioController.php";
 
 }else{
     $linkLogin = 'View/login.php';
@@ -84,7 +84,7 @@ if($_SESSION['logado'] == 1){
             </h2>
             <img src='' id='livro1' class='destaque-img'  onmouseover='dentro(this.id)'  alt="">
             <br><br>
-              <button class='button'> <i class='material-icons'>shopping_cart</i> </button>
+            <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
               <button class='button'> <i class='material-icons'>info</i> </button>
 
         </center>
@@ -99,7 +99,7 @@ if($_SESSION['logado'] == 1){
             </h2>
             <img src='' id='livro2' class='destaque-img'  onmouseover='dentro(this.id)'  alt="">
             <br><br>
-            <button class='button'> <i class='material-icons'>shopping_cart</i> </button>
+            <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
             <button class='button'> <i class='material-icons'>info</i> </button>
             
         </center>
@@ -114,7 +114,7 @@ if($_SESSION['logado'] == 1){
     <h1 id='catalogo' class='bar'>Catálogo</h1>
 
 
-    <div id='destaques'>
+    <div id='catalogo'>
     
     <div class='catalogo-bloco' id='catalogo-bloco-1'>
         <center>
@@ -125,7 +125,7 @@ if($_SESSION['logado'] == 1){
             </h2>
             <img src='https://images-na.ssl-images-amazon.com/images/I/71OFqSRFDgL.jpg' id='catalogo-livro1' class='catalogo-img'   alt="">
             <br><br>
-              <button class='button'> <i class='material-icons'>shopping_cart</i> </button>
+            <a href="View/catalogo.php">   <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
               <button class='button'> <i class='material-icons'>info</i> </button>
 
         </center>
@@ -140,7 +140,7 @@ if($_SESSION['logado'] == 1){
             </h2>
             <img src='https://lojasaraiva.vteximg.com.br/arquivos/ids/12101548/1008972955.jpg?v=637142220125430000' id='catalogo-livro2' class='catalogo-img'    alt="">
             <br><br>
-            <button class='button'> <i class='material-icons'>shopping_cart</i> </button>
+            <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
             <button class='button'> <i class='material-icons'>info</i> </button>
             
         </center>
@@ -156,7 +156,7 @@ if($_SESSION['logado'] == 1){
             </h2>
             <img src='https://www.companhiadasletras.com.br/images/livros/85050_gg.jpg' id='catalogo-livro3' class='catalogo-img'   alt="">
             <br><br>
-              <button class='button'> <i class='material-icons'>shopping_cart</i> </button>
+            <a href="View/catalogo.php">    <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
               <button class='button'> <i class='material-icons'>info</i> </button>
 
         </center>
@@ -171,7 +171,7 @@ if($_SESSION['logado'] == 1){
             </h2>
             <img src='https://images-na.ssl-images-amazon.com/images/I/51DLakKYLVL.jpg' id='catalogo-livro4' class='catalogo-img'   alt="">
             <br><br>
-            <button class='button'> <i class='material-icons'>shopping_cart</i> </button>
+            <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
             <button class='button'> <i class='material-icons'>info</i> </button>
             
         </center>

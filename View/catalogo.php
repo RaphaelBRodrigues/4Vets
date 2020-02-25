@@ -8,13 +8,61 @@ if($_GET['status'] == 'failCad'){
 ?>
 <head>
 
-<!-- Jquery usado para a requisição ajax,foi o único momento em que utilizei a biblioteca !-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src='js/cep.js'></script>
-    <link rel="stylesheet" href="css/login.css">
+
+    <link rel="stylesheet" href="css/catalogo.css">
 </head>
 <body>
     
+
+
+<center>
+
+<a href="adicionarLivro.php"><button class='botao' id='adicionar'>Adicionar um novo livro</button></a>
+
+
+<div id='linha'>
+    
+    <div class='fileira-bloco' id='b1' >
+        <center>
+            <h1 class='fileira-titulo'>Fahrenheit 451  
+             <br>    
+            <small id='fi'>Ray Bradbury</small>
+            <hr>
+            </h1>
+            <img src='https://images-na.ssl-images-amazon.com/images/I/71OFqSRFDgL.jpg' id='fileira-livro1' class='fileira-img'   alt="">
+
+            <br><br>         
+               <h2>R$50,00</h2>
+
+              <button class='button'> <i class='material-icons'>shopping_cart</i> </button>
+
+        </center>
+    </div>
+
+    <div class='fileira-bloco' id='b2'>
+        <center>
+            <h1 class='fileira-titulo'>1984   
+             <br>    
+            <small id='fi'>George Orwell</small>
+            <hr>
+            </h1>
+            <img src='https://lojasaraiva.vteximg.com.br/arquivos/ids/12101548/1008972955.jpg?v=637142220125430000' id='fileira-livro2' class='fileira-img'    alt="">
+
+            <br><br>   
+             <h2>R$50,00</h2>
+
+            <button class='button'> <i class='material-icons'>shopping_cart</i>  </button>
+            
+        </center>
+    </div>
+    
+
+    
+    </div>
+
+
+
+    </center>
 </body>
 <?php
 include("templates/footer.php");

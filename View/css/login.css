@@ -12,11 +12,11 @@ a{
     background-color: blue;
     width: 35%;
 }
+#login-button{
+    width: 100%;
+}
 #senha{
     width: 35%;
-
-}
-fieldset button{
-    width: 35%;
+    background-color: red;
 
 }

@@ -21,7 +21,7 @@ if($_GET['status'] == 'failCad'){
     <input required type="text" name='user' placeholder="Nome de usuário"><span class='material-icons'>person</span> <br>
     <input required type="password" name='pass' placeholder="Senha"><span class='material-icons'>vpn_key</span> <br>
 
-    <input required type="text" id='cep' name='cep' placeholder="CEP"><span class='material-icons'>filter_2</span> <br>
+    <input required type="text" pattern="{8,9}" id='cep' name='cep' placeholder="CEP"><span class='material-icons'>filter_2</span> <br>
     <input readonly type="text" name='bairro' id='bairro' placeholder="Bairro"><span class='material-icons'>filter_2</span> <br>
     <input  readonly type="text" name='logradouro' id='logradouro' placeholder="Logradouro"><span class='material-icons'>filter_2</span> <br>
     <input required type="text" name='ncasa' placeholder="Número da casa"><span class='material-icons'>home</span> <br>

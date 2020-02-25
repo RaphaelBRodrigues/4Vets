@@ -18,13 +18,13 @@ if($_GET['status'] == 'failCad'){
 <fieldset id='login'>
     <legend>Atualizar dados</legend>
 
-    <input  type="text" name='user' placeholder="<?php echo $_GET['nome']; ?>"><span class='material-icons'>person</span> <br>
+    <input  type="text" name='user' value="<?php echo $_GET['nome']; ?>"><span class='material-icons'>person</span> <br>
 
-    <input  type="text" id='cep' name='cep' placeholder="<?php echo $_GET['cep']; ?>"><span class='material-icons'>filter_2</span> <br>
-    <input readonly type="text" name='bairro' id='bairro' placeholder="Bairro"><span class='material-icons'>filter_2</span> <br>
-    <input  readonly type="text" name='logradouro' id='logradouro' placeholder="Logradouro"><span class='material-icons'>filter_2</span> <br>
-    <input  type="text" name='ncasa' placeholder="<?php echo $_GET['ncasa']; ?>"><span class='material-icons'>home</span> <br>
-<input type="text" name='hint' placeholder="Dica para lembrar da senha"><span class='material-icons'>lightbulb_outline
+    <input  type="text" id='cep' name='cep' value="<?php echo $_GET['cep']; ?>"><span class='material-icons'>filter_2</span> <br>
+    <input readonly type="text" name='bairro' id='bairro' placeholder="<?php echo $_GET['bairro']; ?>" ><span class='material-icons'>filter_2</span> <br>
+    <input  readonly type="text" name='logradouro' id='logradouro' placeholder="<?php echo $_GET['logr']; ?>"><span class='material-icons'>filter_2</span> <br>
+    <input  type="text" name='ncasa' value="<?php echo $_GET['ncasa']; ?>"><span class='material-icons'>home</span> <br>
+<input type="text" name='hint' value="<?php echo $_GET['hint']; ?>"><span class='material-icons'>lightbulb_outline
 </span>
 <br><br>
 <button type="submit">Atualizar</button>

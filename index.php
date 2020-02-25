@@ -4,7 +4,7 @@
 
 <?php
 @session_start();
-
+echo "<script>alert(".$_SESSION['usrID'].");</script>";
 if($_SESSION['logado']){
     $log = "verified_user";
     $linkLogin = "Controller/ConsultarController.php";

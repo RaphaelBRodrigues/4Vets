@@ -50,19 +50,20 @@ if($_SESSION['logado'] == 1){
 <body>
     <nav id='menu'>
         <ul id='menu-list'>
-   <li>  <a class='menu-item' href="#"><span id='logo'>Sob a Égide</span> </a></li>
-   <li>  <a class='menu-item' href="#"><i> Home </i></a></li>
-   <li>  <a class='menu-item' href="View/novidades.php"><i> Novidades </i></a></li>
-   <li>  <a class='menu-item' href="View/catalogo.php"><i> Catálogo </i></a></li>
-   <li>  <a class='menu-item' href="View/contatos.php"><i> Contatos </i></a></li>
-
-   <li><a href="View/carrinho.php"> <i class='menu-item material-icons' id='menu-shop'>shopping_cart</i></a></li>
-   <li><a href="<?php echo $linkLogin;?>"><i class='menu-item material-icons' id='menu-login'><?php echo $log; ?></i></a></li>
+   <li>  <a class='menu-item log' href="#"><span id='logo'>Sob a Égide</span> </a> <button class='material-icons retratil button' onclick='retrair()'>menu</button></li> 
+   <li>  <a class='menu-item invisivel' href="#" id='home'><i> Home </i></a></li>
+   <li>  <a class='menu-item invisivel' id='novidades' href="View/novidades.php"><i> Novidades </i></a></li>
+   <li>  <a class='menu-item invisivel' id='catalogos' href="View/catalogo.php"><i> Catálogo </i></a></li>
+   <li>  <a class='menu-item invisivel' id='contatos' href="View/contatos.php"><i> Contatos </i></a></li>
+    
+   <li><a href="View/carrinho.php"> <i class='menu-item material-icons invisivel' id='menu-shop'>shopping_cart</i></a></li>
+   <li><a href="<?php echo $linkLogin;?>"><i class='menu-item material-icons invisivel' id='menu-login'><?php echo $log; ?></i></a></li>
 </ul>
    
     </nav>
 
     <div id='main'>
+        
         <div id='main-escuro'>
         <center>
         <h1 id='main-text' ></h1>
@@ -196,10 +197,10 @@ if($_SESSION['logado'] == 1){
 
         <br>
         <input required id='form-msg' name="message" type="text" placeholder="Mensagem">  <sup class='material-icons'>mail</sup>
-<br>
+<br><br>
         <button id='form-button-submit' class='button' type='submit'>Enviar</button><br><br>
         <button id='form-button-reset' class='button' type='reset'>Apagar</button>
-        </center>
+        </center><br>
     </fieldset>
     </form>
 
@@ -212,3 +213,4 @@ include("View/templates/footer.php");
 </html>
 <script src='View/js/livros.js'></script>
 <script src='View/js/texto.js'></script>
+<script src='View/js/menu.js'></script>

@@ -8,6 +8,12 @@ body{
 border:0px;
 background-color: rgba(0,0,0,0);
 }
+#centralizar{
+    display: none;
+}
+.retratil{
+    display: none;
+}
 
 #menu{
     z-index: 999;
@@ -251,49 +257,123 @@ fieldset button{
 }
 
 @media screen and (max-width:1088px) {
-    body {
-        height: 100vh;
-        width: 100vw;
-      }
-    #menu-shop{
 
-        left: 1em;
+    
+    #menu-shop{
+margin-top: 0.3em;
+        left: -1.8em;
     }
     #menu-login{
-        left: 1em;
+
+        left: -2.6em;
     }
 
  
 
+
+.destaque-bloco{
+    display:block;
+    position: relative;
+    margin-left: auto;
+    margin-right:auto;
+   
+}
+.catalogo-bloco{
+    display:block;
+}
+.bar{
+    font-size: 2em;
+}
+
+#main-text{
+    width: 100%;
+padding-top: 2.5em;
+    color:white;
+    z-index: 999;
+    font-size: 2.1em;
+}
+
 #main{
-    width: 100vw;
+    position: relative;
+    top:0;
+    margin-top: 0;
+    width: 100%;
     background-position: left center;
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 350%;
-    min-height: 150%;
-    height: 80vh;
-    background-image: url('https://elhumanista.net/wp-content/uploads/2018/09/biblioteca.jpg');
+    height: 30vh;
 }
 #main-escuro{
     box-sizing: content-box;
-    width: 100%;
-    min-height: 100%;
-width: 150vw;
-height: 80vh;
-background-color: rgba(0,0,0,0.5);
+width: 100%;
+height: 30vh;
 
 }
-#main-text{
-    text-transform: uppercase;
-    font-family: 'Varela Round' ;
-font-style: oblique;   
- text-shadow: 5px 5px 5px black;;
-padding-top: 1.5em;
-    color:white;
+
+/*Cima já está responsivo*/
+
+
+
+/*Menua agora*/
+
+
+#menu{
     z-index: 999;
-    font-size: 5em;
-    width: 150vw;
+    display: inline-block;
+    position: fixed;
+    width: 100%;
+    margin-top: -3.4em;
+    height: 7.1em;
 }
+
+#logo{
+    top: 1em;
+font-size: 2.1em;
+float: left;
+    
+}
+.retratil{
+    display: table-cell;
+margin-top: -1.2em;
+margin-right: 0.5em;
+float: right;   
+   
+}
+.log{
+    margin-top: 3em;
+    margin-left: -1em;
+    display: table;
+    width: 100%;
+}
+.aumentar{
+    background-color: yellow;
+    height: 15em;
+}
+
+.menu-item i{
+    margin-left: -1.5em;
+    position: relative;
+    display: block;
+    opacity: 1;
+
+}
+.invisivel{
+    display: none;
+    opacity: 0;
+}
+ul#menu-list .material-icons{
+    font-size: 2em;
+    position: none;
+    top:0em;
+}
+
+fieldset{
+    width: 80%;
+}
+
+
+
+
+
 
 }

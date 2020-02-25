@@ -31,6 +31,10 @@ if($_GET['status'] == 'failCad'){
 </fieldset>
 
 </form>
+
+<form action="../Controller/destruirSessao.php">
+<button class='button'>Desconectar</button>
+</form>
 </center>
 
 </body>

@@ -17,17 +17,17 @@ if($_GET['status'] == 'FailLog' ){
     <link rel="stylesheet" href="css/login.css">
 </head>
 <center>
-<form action="../Controller/loginController.php" method='get'>
+<form action="../Controller/loginController.php" method='post'>
 <fieldset id='login'>
     <legend>Login</legend>
 
 <input required type="text" name='nome' placeholder="Usuário"><span class='material-icons'>person</span> <br>
-<input required type="password" name='senha' placeholder="Senha"><span class='material-icons'>vpn_key
+<input  type="password" name='senha' placeholder="Senha"><span class='material-icons'>vpn_key
 </span>
 <br><br>
 <button id='login-button' type="submit">Entrar</button><br><br>
 <button id='cadastro'> <a href="cadastro.php">Não tenho cadastro</a><br></button>
-<button id='senha'> <a href="cadastro.php">Esqueci minha senha</a><br></button>
+<button id='senha' onclick="alert('Você deve preencher o campo Usuário');"> <a href="recuperar.php">Esqueci minha senha</a><br></button>
 
 <br><br>
 </fieldset>

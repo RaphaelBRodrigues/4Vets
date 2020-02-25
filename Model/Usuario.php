@@ -29,34 +29,48 @@ public function Atualizar(){
      }
 }
 
-public function Logar(){
+public function Logar($usuario,$senha){
 
     foreach($this->pdo->query("SELECT * FROM Usuario") as $user){
+echo "Banco:".strtoupper($user['Nome']) ."<br>";
+echo "Inserido:".$usuario ."<br><br><br>" ;
 
-         echo strtoupper($user['Nome']) ;
-         echo strtoupper($user['Senha']);
-         echo strtoupper($_GET['nome']);
-         echo strtoupper($_GET['senha']);
-
-         if(strtoupper($user['Nome']) == strtoupper($_GET['nome']) ){
-          if(strtoupper($user['Senha']) == strtoupper($_GET['senha'])){
+echo "Banco:".strtoupper($user['Senha']) ."<br>";
+echo "Inserido".$senha;
+     if(strtoupper($user['Nome']) == $usuario){
+          if(strtoupper($user['Senha']) == $senha){
                session_start();
                $_SESSION['usr'] = $user['Nome'];
                $_SESSION['usrID'] = $user['UsuarioID'];
-              $_SESSION['logado'] = true;
-               header("location: ../index.php?status=successLog");
+               $_SESSION['logado'] = true;
+               
+          header("location: ../index.php?status=successLog");
 
+              return "FOOOOOOOOOOOOOOOOOOOOOOOOOI ";
+         // break;
 
-          }else{
-               header("location: ../View/login.php?status=FailSenha");
+          
+     }else if($_SESSION['logado'] != true){
+          $_SESSION['logado'] = false;
 
-          }
-         }else{
-          header("location: ../View/login.php?status=FailLog");
+          echo "bosta";
 
-         }
+        // header("location: ../View/login.php?status=FailSenha");
+
+     }
+    }else{
+     echo "bosta";
+
+     $_SESSION['logado'] = false;
+
+    
 
     }
+
+      
+}
+//header("location: ../View/login.php?status=FailLog");
+return "Falhou";
 }
 
 

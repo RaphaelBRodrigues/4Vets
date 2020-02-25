@@ -1,5 +1,13 @@
 <?php
+@session_start();
+if($_SESSION['logado']){
+    $log = "verified_user";
+    $linkLogin = "../Controller/ConsultarController.php";
 
+}else{
+    $linkLogin = 'login.php';
+    $log = 'person_pin';
+}
 echo "
 <!DOCTYPE html>
 <html lang='en'>
@@ -27,7 +35,7 @@ echo "
    <li>  <a class='menu-item' href=''><i> Contatos </i></a></li>
 
    <li><a href=''> <i class='menu-item material-icons' id='menu-shop'>shopping_cart</i></a></li>
-   <li><a href='login.php'><i class='menu-item material-icons' id='menu-login'>person_pin</i></a></li>
+   <li><a href='".$linkLogin."'><i class='menu-item material-icons' id='menu-login'>".$log."</i></a></li>
 </ul>
    
     </nav>

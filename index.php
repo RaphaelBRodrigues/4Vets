@@ -3,9 +3,16 @@
 <head>
 
 <?php
+if(empty($_SESSION['usrID'] == true)){
+
+@session_destroy();
+$linkLogin = 'View/login.php';
+    $log = 'person_pin';
+
+}
 @session_start();
-echo "<script>alert(".$_SESSION['usrID'].");</script>";
-if($_SESSION['logado']){
+//echo "<script>alert(".$_SESSION['usrID'].");</script>";
+if($_SESSION['logado'] == 1){
     $log = "verified_user";
     $linkLogin = "Controller/ConsultarController.php";
 

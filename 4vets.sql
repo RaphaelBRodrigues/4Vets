@@ -15,4 +15,4 @@ Hint text not null,
 primary key(UsuarioID)
 );
 
-select * from Usuario;
+SELECT * FROM Usuario ;

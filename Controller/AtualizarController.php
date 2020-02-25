@@ -4,8 +4,8 @@ require '../Model/Usuario.php';
 
 $pdoo = new Usuario();
 
-$user = $pdoo->Atualizar();
 
-header("location: ../View/atualizar.php?");
+echo $pdoo->Atualizar($_POST['user'],$_POST['cep'],$_POST['bairro'],$_POST['logradouro'],$_POST['ncasa'],$_POST['hint']);
+//header("location: ../View/atualizar.php?");
 
 ?>

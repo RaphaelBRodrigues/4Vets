@@ -19,14 +19,12 @@ public function Consultar(){
      }
 }
 
-public function Atualizar(){
-     //Falta implementar
+public function Atualizar($nome,$cep,$bairro,$logr,$ncasa,$hint){
      @session_start();
 
-     foreach($this->pdo->query("SELECT * FROM Usuario where UsuarioID = ".$_SESSION['usrID']."") as $user){
-
-          return $user;
-     }
+$prepare =  $this->pdo->prepare("UPDATE Usuario set  Nome = '".$nome."',cep ='".$cep."', Bairro ='".$bairro."' , Logradouro ='".$logr."', Ncasa ='".$ncasa."', Usuario ='".$nome."', Hint = '".$hint."' where UsuarioID = ".$_SESSION['usrID']."");
+$prepare->execute();
+return $prepare->rowCount();
 }
 
 public function Logar($usuario,$senha){
@@ -53,13 +51,13 @@ echo "Inserido".$senha;
      }else if($_SESSION['logado'] != true){
           $_SESSION['logado'] = false;
 
-          echo "bosta";
+          echo "n foi";
 
-        // header("location: ../View/login.php?status=FailSenha");
+       // header("location: ../View/login.php?status=FailSenha");
 
      }
     }else{
-     echo "bosta";
+     echo "n foi";
 
      $_SESSION['logado'] = false;
 
@@ -69,7 +67,7 @@ echo "Inserido".$senha;
 
       
 }
-//header("location: ../View/login.php?status=FailLog");
+header("location: ../View/login.php?status=FailLog");
 return "Falhou";
 }
 

@@ -25,8 +25,11 @@ if($_GET['status'] == 'FailLog' ){
 <input required type="password" name='senha' placeholder="Senha"><span class='material-icons'>vpn_key
 </span>
 <br><br>
-<button id='cadastro'> <a href="cadastro.php">Não tenho cadastro</a><br></button><br><br>
 <button type="submit">Entrar</button>
+<button id='cadastro'> <a href="cadastro.php">Não tenho cadastro</a><br></button>
+<button id='senha'> <a href="cadastro.php">Esqueci minha senha</a><br></button>
+
+<br><br>
 </fieldset>
 
 </form>

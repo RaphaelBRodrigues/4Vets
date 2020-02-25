@@ -11,6 +11,21 @@ function __construct()
     
 }
 
+public function Consultar(){
+     foreach($this->pdo->query("SELECT * FROM Usuario where UsuarioID = 1") as $user){
+
+          return $user;
+     }
+}
+
+public function Atualizar(){
+     //Falta implementar
+     foreach($this->pdo->query("SELECT * FROM Usuario where UsuarioID = 1") as $user){
+
+          return $user;
+     }
+}
+
 public function Logar(){
 
     foreach($this->pdo->query("SELECT * FROM Usuario") as $user){
@@ -22,8 +37,11 @@ public function Logar(){
 
          if(strtoupper($user['Nome']) == strtoupper($_GET['nome']) ){
           if(strtoupper($user['Senha']) == strtoupper($_GET['senha'])){
+               session_start();
                $_SESSION['usr'] = $user['Nome'];
-              header("location: ../index.php?status=successLog");
+              $_SESSION['logado'] = true;
+               header("location: ../index.php?status=successLog");
+
 
           }else{
                header("location: ../View/login.php?status=FailSenha");
@@ -54,7 +72,10 @@ $prepare->execute();
      if($prepare->rowCount() == 1){
         session_start();
         $_SESSION['usr'] = $_GET['user'];
+        $_SESSION['logado'] = true;
+
        header("location: ../index.php?status=successCad");
+
      }else{
         header("location: ../View/cadastro.php?status=failCad");
 

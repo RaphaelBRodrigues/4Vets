@@ -9,5 +9,14 @@ a{
 }
 #cadastro{
     color:white;
-    background-color: #f1c40f;
+    background-color: blue;
+    width: 35%;
+}
+#senha{
+    width: 35%;
+
+}
+fieldset button{
+    width: 35%;
+
 }

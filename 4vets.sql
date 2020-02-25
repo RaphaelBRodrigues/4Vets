@@ -1,5 +1,4 @@
 
-create database egide;
 use egide;
 
 create table Usuario(

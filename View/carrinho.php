@@ -13,3 +13,10 @@ if($_GET['status'] == 'failCad'){
 <script src='js/cep.js'></script>
     <link rel="stylesheet" href="css/login.css">
 </head>
+<body>
+    
+</body>
+
+<?php
+include("templates/footer.php");
+?>

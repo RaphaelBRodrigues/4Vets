@@ -20,9 +20,9 @@ if($_GET['status'] == 'FailLog' ){
 <center>
 
 <fieldset id='login'>
+<legend>Login</legend>
 
 <form action="../Controller/loginController.php" method='post'>
-    <legend>Login</legend>
 
 <input required type="text" name='nome' id='nome' placeholder="Usuário"><span class='material-icons'>person</span> <br>
 <input  type="password" name='senha' placeholder="Senha"><span class='material-icons'>vpn_key
@@ -39,6 +39,8 @@ if($_GET['status'] == 'FailLog' ){
 </fieldset>
 
 </center>
+<?php
+include("templates/footer.php");
+?>
 
-</body>
-</html>
+

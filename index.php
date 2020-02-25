@@ -185,23 +185,28 @@ if($_SESSION['logado'] == 1){
 
     <h1 id='contatos' class='bar'>contatos</h1>
 
-    <form action="" method="post">
+    <form action="https://formspree.io/tiunasp801@gmail.com" method="post">
 
     <fieldset>
         <legend>Email</legend>
         
         <center>
-        <input type="text" placeholder="Email">
+        <input  type="email" required ame="email" placeholder="Email">
         <sup class='material-icons'>mail</sup>
 
         <br>
-        <input id='form-msg' type="text" placeholder="Mensagem">  <sup class='material-icons'>mail</sup>
+        <input required id='form-msg' name="message" type="text" placeholder="Mensagem">  <sup class='material-icons'>mail</sup>
 <br>
         <button id='form-button-submit' class='button' type='submit'>Enviar</button><br><br>
         <button id='form-button-reset' class='button' type='reset'>Apagar</button>
         </center>
     </fieldset>
     </form>
+
+
+    <?php
+include("View/templates/footer.php");
+?>
 
 </body>
 </html>

@@ -15,10 +15,10 @@ if($_GET['status'] == 'failCad'){
 </head>
 <center>
 <fieldset id='login'>
+<legend>Atualizar dados</legend>
 
 <form action="../Controller/AtualizarController.php" method='post'>
 
-    <legend>Atualizar dados</legend>
 
     <input  type="text" name='user' value="<?php echo $_GET['nome']; ?>"><span class='material-icons'>person</span> <br>
 
@@ -39,6 +39,6 @@ if($_GET['status'] == 'failCad'){
 
 
 </center>
-
-</body>
-</html>
+<?php
+include("templates/footer.php");
+?>

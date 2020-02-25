@@ -17,4 +17,7 @@ if($_GET['status'] == 'FailLog' ){
     <link rel="stylesheet" href="css/login.css">
 </head>
 
-<h1>Dica:</h1>
+
+<?php
+include("templates/footer.php");
+?>

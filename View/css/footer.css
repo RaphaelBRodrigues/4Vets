@@ -1,0 +1,12 @@
+#footer{   
+    font-family: 'Dancing Script' ;
+    font-size: 1.7em;
+    color:rgba(256, 240, 241,1.0);
+    top:25vh;
+    position: relative;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    bottom: 0;
+    background-color:rgba(135, 160, 161,1.0);
+}

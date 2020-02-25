@@ -34,6 +34,6 @@ if($_GET['status'] == 'failCad'){
 
 </form>
 </center>
-
-</body>
-</html>
+<?php
+include("templates/footer.php");
+?>

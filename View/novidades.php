@@ -10,3 +10,10 @@ if($_GET['status'] == 'failCad'){
 
 
 </head>
+<body>
+    
+</body>
+
+<?php
+include("templates/footer.php");
+?>

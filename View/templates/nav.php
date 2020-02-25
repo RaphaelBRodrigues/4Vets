@@ -34,7 +34,7 @@ echo "
    <li>  <a class='menu-item' href='catalogo.php'><i> Catálogo </i></a></li>
    <li>  <a class='menu-item' href=''><i> Contatos </i></a></li>
 
-   <li><a href=''> <i class='menu-item material-icons' id='menu-shop'>shopping_cart</i></a></li>
+   <li><a href='carrinho.php'> <i class='menu-item material-icons' id='menu-shop'>shopping_cart</i></a></li>
    <li><a href='".$linkLogin."'><i class='menu-item material-icons' id='menu-login'>".$log."</i></a></li>
 </ul>
    

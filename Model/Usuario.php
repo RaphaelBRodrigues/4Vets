@@ -12,7 +12,15 @@ function __construct()
 }
 
 public function Consultar(){
+
      @session_start();
+
+     $usuarioNome = strtoupper($_GET['nome']);
+     if($_GET['funcao'] == 'recuperar'){
+          foreach($this->pdo->query("SELECT * FROM Usuario where UPPER(Nome) = '".$usuarioNome."' ") as $user){
+               return $user['Hint'];
+          }     
+     }
      foreach($this->pdo->query("SELECT * FROM Usuario where UsuarioID = ".$_SESSION['usrID']."") as $user){
 
           return $user;

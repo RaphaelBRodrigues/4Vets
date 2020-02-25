@@ -14,25 +14,30 @@ if($_GET['status'] == 'FailLog' ){
     }
 ?>
 <head>
+    <script src='js/recuperarSenha.js'></script>
     <link rel="stylesheet" href="css/login.css">
 </head>
 <center>
-<form action="../Controller/loginController.php" method='post'>
+
 <fieldset id='login'>
+
+<form action="../Controller/loginController.php" method='post'>
     <legend>Login</legend>
 
-<input required type="text" name='nome' placeholder="Usuário"><span class='material-icons'>person</span> <br>
+<input required type="text" name='nome' id='nome' placeholder="Usuário"><span class='material-icons'>person</span> <br>
 <input  type="password" name='senha' placeholder="Senha"><span class='material-icons'>vpn_key
 </span>
 <br><br>
 <button id='login-button' type="submit">Entrar</button><br><br>
-<button id='cadastro'> <a href="cadastro.php">Não tenho cadastro</a><br></button>
-<button id='senha' onclick="alert('Você deve preencher o campo Usuário');"> <a href="recuperar.php">Esqueci minha senha</a><br></button>
+</form>
+<button id='cadastro'> <a href="cadastro.php">Não tenho cadastro</a></button>
 
+<button id='senha' onclick="recuperar()"> Esqueci minha  senha</button>
 <br><br>
+
+
 </fieldset>
 
-</form>
 </center>
 
 </body>

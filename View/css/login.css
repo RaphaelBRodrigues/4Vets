@@ -13,10 +13,18 @@ a{
     width: 35%;
 }
 #login-button{
-    width: 100%;
+    width: 70%;
 }
 #senha{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 35%;
+    font-weight: bold;
     background-color: red;
-
+        padding:0.5em 0.8em 0.5em 0.8em;
+        color:white;
+        font-size: 1.5em;
+        border:0px;
+        border-radius:0.5em;
+    
 }
+

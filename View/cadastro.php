@@ -24,11 +24,11 @@ if($_GET['status'] == 'failCad'){
     <input required type="text" pattern="{8,9}" id='cep' name='cep' placeholder="CEP"><span class='material-icons'>filter_2</span> <br>
     <input readonly type="text" name='bairro' id='bairro' placeholder="Bairro"><span class='material-icons'>filter_2</span> <br>
     <input  readonly type="text" name='logradouro' id='logradouro' placeholder="Logradouro"><span class='material-icons'>filter_2</span> <br>
-    <input required type="text" name='ncasa' placeholder="Número da casa"><span class='material-icons'>home</span> <br>
+    <input required type="number" name='ncasa' placeholder="Número da casa"><span class='material-icons'>home</span> <br>
 <input type="text" name='hint' placeholder="Dica para lembrar da senha"><span class='material-icons'>lightbulb_outline
 </span>
 <br><br>
-<button id='cadastro'> <a href="cadastro.php">Já tenho cadastro</a><br></button><br><br>
+<button id='cadastro'> <a href="login.php">Já tenho cadastro</a><br></button><br><br>
 <button type="submit">Cadastrar</button>
 </fieldset>
 

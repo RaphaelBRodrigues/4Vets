@@ -50,13 +50,13 @@ if($_SESSION['logado'] == 1){
 <body>
     <nav id='menu'>
         <ul id='menu-list'>
-   <li>  <a class='menu-item' href="View/"><span id='logo'>Sob a Égide</span> </a></li>
-   <li>  <a class='menu-item' href="View/"><i> Home </i></a></li>
-   <li>  <a class='menu-item' href="#destaques"><i> Novidades </i></a></li>
+   <li>  <a class='menu-item' href="#"><span id='logo'>Sob a Égide</span> </a></li>
+   <li>  <a class='menu-item' href="#"><i> Home </i></a></li>
+   <li>  <a class='menu-item' href="View/novidades.php"><i> Novidades </i></a></li>
    <li>  <a class='menu-item' href="View/catalogo.php"><i> Catálogo </i></a></li>
-   <li>  <a class='menu-item' href="View/"><i> Contatos </i></a></li>
+   <li>  <a class='menu-item' href="View/contatos.php"><i> Contatos </i></a></li>
 
-   <li><a href=""> <i class='menu-item material-icons' id='menu-shop'>shopping_cart</i></a></li>
+   <li><a href="View/carrinho.php"> <i class='menu-item material-icons' id='menu-shop'>shopping_cart</i></a></li>
    <li><a href="<?php echo $linkLogin;?>"><i class='menu-item material-icons' id='menu-login'><?php echo $log; ?></i></a></li>
 </ul>
    

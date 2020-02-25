@@ -16,3 +16,5 @@ if($_GET['status'] == 'FailLog' ){
 <head>
     <link rel="stylesheet" href="css/login.css">
 </head>
+
+<h1>Dica:</h1>

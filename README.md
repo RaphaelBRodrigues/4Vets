@@ -1,11 +1,14 @@
 # 4Vets
 
--Execute a query 4vets.sql em no SGBD MySQL.
--Mova os arquivos do projeto para um servidor HTTP(Apache...)
--Utilize a aplicação.
+<h1>Executar o projeto</h1>
 
-Funcionalidades e características:
--Responsivo.
--Sistema de login,cadastro e atualização de usuário.
--Sistema de carrinho e compra.
--Cadastro,remoção e manipulação de produtos.
+-Execute a query 4vets.sql em no SGBD MySQL. <br/>
+-Mova os arquivos do projeto para um servidor HTTP(Apache...)<br/>
+-Utilize a aplicação.<br/>
+<br/><br/>
+
+<h1>Funcionalidades e características:</h1>
+-Responsivo.<br/>
+-Sistema de login,cadastro e atualização de usuário.<br/>
+-Sistema de carrinho e compra.<br/>
+-Cadastro,remoção e manipulação de produtos.<br/>

@@ -48,10 +48,10 @@ unset($_GET['status']);
      -->
 
      <?php
-     require '../Model/Livro.php';
+     //Incluindo os livros na view
+     include '../Controller/consultarLivrosController.php';
 
-     $livros = new Livro();
-     $livros->Consultar();
+  
      
      ?>
     
@@ -65,3 +65,4 @@ unset($_GET['status']);
 <?php
 include("templates/footer.php");
 ?>
+<script src='js/infoCat.js'></script>

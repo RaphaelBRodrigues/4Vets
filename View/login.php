@@ -17,6 +17,8 @@ if($_GET['status'] == 'FailLog' ){
     <script src='js/recuperarSenha.js'></script>
     <link rel="stylesheet" href="css/login.css">
 </head>
+<body>
+    
 <center>
 
 <fieldset id='login'>
@@ -37,6 +39,7 @@ if($_GET['status'] == 'FailLog' ){
 
 
 </fieldset>
+</body>
 
 </center>
 <?php

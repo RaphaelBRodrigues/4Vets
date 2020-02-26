@@ -26,6 +26,19 @@ if($prepare->rowCount() == 1){
     }
 }
 
+public function infoLivro(){
+    foreach($this->pdo->query("SELECT * FROM Livro where LivroID = ".$_GET['idLivro']."") as $livro){
+      echo "
+      
+   <h1>   Nome do livro: ".$livro['Titulo']."</h1>
+    <h2>  Autor:  ".$livro['Autor']."</h2>
+    <img src=' ".$livro['linkImg']."'>
+    <h3>".$livro['Descricao']."</h3>
+      ";
+    
+    }
+    }
+
 public function Consultar(){
 
 
@@ -33,7 +46,8 @@ public function Consultar(){
     foreach($this->pdo->query("SELECT * FROM Livro") as $livro){
 
         echo "
-        
+        <script src='js/infoCat.js'></script>
+
         <div class='fileira-bloco' >
         <center>
             <h1 class='fileira-titulo'>".$livro['Titulo']."  
@@ -44,13 +58,15 @@ public function Consultar(){
             <img src='".$livro['linkImg']."' id='fileira-livro1' class='fileira-img'   alt=''>
 
             <br><br>         
-               <h2>".$livro['Preco']."</h2>
+               <h2>R$ ".$livro['Preco']."</h2>
 
                
                <form action='../Controller/ComprarLivroController.php?' method='get'>
                <button name='LivroID' value='".$livro['LivroID']."' class='button'> <i class='material-icons'>shopping_cart</i> </button>
-           
-               </form>
+
+               </form>          
+                    <button  id='".$livro['LivroID']."' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
+
            
         </center>
     </div>

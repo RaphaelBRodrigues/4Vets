@@ -23,7 +23,9 @@
 hr{
     width: 25%;
 }
-
+.button{
+    cursor: pointer;
+}
 .fileira-img{
 
         width: 18em;

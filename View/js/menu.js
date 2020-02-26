@@ -1,4 +1,4 @@
-var i = 2;
+var i = 0;
 function retrair(){
 
 if(i%2 == 1){

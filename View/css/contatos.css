@@ -1,0 +1,15 @@
+.icone{
+    margin-left: 1em;
+    margin-right: 1em;
+    height: 8em;
+}
+.linha{
+
+position: relative;
+   top: 4em;
+}
+iframe{
+    margin-top: 7em;
+    border-radius: 1em;
+    width: 80%;
+}

@@ -1,16 +1,16 @@
 var texto = "Bem vindo a sua livraria virtual favorita!";
 var textoQuebrado = texto.split("");
-var i = 0;
+var letra = 0;
 var show = null;
 
 show = setInterval(function(){
 
     tela = document.getElementById("main-text").innerHTML;
-document.getElementById("main-text").innerHTML = tela + textoQuebrado[i];
+document.getElementById("main-text").innerHTML = tela + textoQuebrado[letra];
 
-    i++;
+letra+=1;
 
-    if(i >= textoQuebrado.length){
+    if(letra >= textoQuebrado.length){
         clearInterval(show);
 
     }

@@ -44,4 +44,4 @@ primary key(CompraID)
 
 );
 
-select * from Compra;
+select * from Compra ORDER BY CompraID DESC;

@@ -14,9 +14,9 @@
 -Cadastro,remoção e manipulação de produtos.<br/>
 
 <h1>Ferramentas,Tecnologia e arquitetura</h1>
--GIT
--MySQL WorkBench
--HTML,CSS
--JS
--PHP,MySQL
--Arquitetura MVC 
+-GIT<br/>
+-MySQL WorkBench<br/>
+-HTML,CSS<br/>
+-JS<br/>
+-PHP,MySQL<br/>
+-Arquitetura MVC <br/>

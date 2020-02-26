@@ -1,9 +1,14 @@
 <?php
 include("templates/nav.php");
-if($_GET['status'] == 'failCad'){
+if($_GET['status'] == 'fail'){
         //parâmetro passado pelo model usuário no momento do login
-    echo "<script>alert('Falha ao realizar o cadastro')</script>";
+    echo "<script>alert('Falha ao realizar a compra')</script>";
     unset($_GET['status']); 
+}
+if($_GET['status'] == 'failDeletar'){
+    //parâmetro passado pelo model usuário no momento do login
+echo "<script>alert('Falha ao deletar o livro')</script>";
+unset($_GET['status']); 
 }
 ?>
 <head>
@@ -20,9 +25,8 @@ if($_GET['status'] == 'failCad'){
 <a href="adicionarLivro.php"><button class='botao' id='adicionar'>Adicionar um novo livro</button></a>
 
 
-<div id='linha'>
-    
-    <div class='fileira-bloco' id='b1' >
+<!--     
+    <div class='fileira-bloco' >
         <center>
             <h1 class='fileira-titulo'>Fahrenheit 451  
              <br>    
@@ -39,26 +43,18 @@ if($_GET['status'] == 'failCad'){
         </center>
     </div>
 
-    <div class='fileira-bloco' id='b2'>
-        <center>
-            <h1 class='fileira-titulo'>1984   
-             <br>    
-            <small id='fi'>George Orwell</small>
-            <hr>
-            </h1>
-            <img src='https://lojasaraiva.vteximg.com.br/arquivos/ids/12101548/1008972955.jpg?v=637142220125430000' id='fileira-livro2' class='fileira-img'    alt="">
+     -->
 
-            <br><br>   
-             <h2>R$50,00</h2>
+     <?php
+     require '../Model/Livro.php';
 
-            <button class='button'> <i class='material-icons'>shopping_cart</i>  </button>
-            
-        </center>
-    </div>
+     $livros = new Livro();
+     $livros->Consultar();
+     
+     ?>
     
-
+  
     
-    </div>
 
 
 

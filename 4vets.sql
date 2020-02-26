@@ -20,6 +20,28 @@ create table Livro(
 LivroID int auto_increment,
 Titulo varchar(40) not null unique,
 Autor varchar(40) not null,
-Preco int not null,
+linkImg text not null,
+Preco float not null,
 primary key(LivroID)
 );
+
+create table Carrinho(
+CarrinhoID int  auto_increment,
+LivroID int,
+UsuarioID int,
+FOREIGN KEY(LivroID) references Livro(LivroID),
+FOREIGN KEY(UsuarioID) references Usuario(UsuarioID),
+primary key(CarrinhoID)
+
+);
+
+create table Compra(
+CompraID int  auto_increment,
+UsuarioID int,
+Total int,
+FOREIGN KEY(UsuarioID) references Usuario(UsuarioID),
+primary key(CompraID)
+
+);
+
+select * from Compra;

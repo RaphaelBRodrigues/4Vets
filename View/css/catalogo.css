@@ -1,6 +1,6 @@
 .botao{
     position: relative;
-    top: 9em;
+    top: 4em;
     font-size:1.4em;
     color:white;
     background-color: green;
@@ -8,14 +8,9 @@
     border: 0PX;
     border-radius: 3px;
     width: 7em;
-    margin-bottom: 5em;
+    margin-bottom: 8em;
 }
-#atualizar{
-    background-color: gray;
-}
-#remover{
-    background-color: red;
-}
+
 .fileira-bloco .material-icons{
     font-size: 2.5em;
 }
@@ -23,21 +18,12 @@
     display:table;
     top:3em;
     position: relative;
-    margin-top: 3em;
 }
 
-.fileira-bloco{
-    display: table-cell;
-    position: relative;
-    margin-left: auto;
-    margin-right:auto;
+hr{
+    width: 25%;
 }
-#b1{
-    right: 5em;
-}
-#b2{
-    left: 5em;
-}
+
 .fileira-img{
 
         width: 18em;
@@ -52,23 +38,5 @@ box-shadow: 10px 7px 5px black;
 }
 .fileira-titulo{
     font-family: 'Montserrat' ;
-
-}
-@media screen and (max-width:1088px) {
-
-    
-
-
-.fileira-bloco{
-     left: 0;
-    right: 0;
-    display:block;
-}
-#b1{
-    right: 0em;
-}
-#b2{
-    left: 0em;
-}
 
 }

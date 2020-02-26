@@ -1,0 +1,21 @@
+#separador{
+    width: 100%;
+}
+i{
+    cursor: pointer;
+}
+#x{
+    color:red;
+
+}
+
+fieldset{
+    position: relative;
+    top:4em;
+}
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#total{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

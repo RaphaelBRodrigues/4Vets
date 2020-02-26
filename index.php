@@ -196,7 +196,7 @@ if($_SESSION['logado'] == 1){
         <sup class='material-icons'>mail</sup>
 
         <br>
-        <input required id='form-msg' name="message" type="text" placeholder="Mensagem">  <sup class='material-icons'>mail</sup>
+        <input required id='form-msg' name="message" type="text" placeholder="Mensagem">  <sup class='material-icons'>textsms</sup>
 <br><br>
         <button id='form-button-submit' class='button' type='submit'>Enviar</button><br><br>
         <button id='form-button-reset' class='button' type='reset'>Apagar</button>

@@ -8,13 +8,33 @@ if($_GET['status'] == 'failCad'){
 ?>
 <head>
 
-<!-- Jquery usado para a requisição ajax,foi o único momento em que utilizei a biblioteca !-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src='js/cep.js'></script>
-    <link rel="stylesheet" href="css/login.css">
+<script src='js/deletarCarrinho.js'></script>
+    <link rel="stylesheet" href="css/carrinho.css">
 </head>
 <body>
     
+
+
+
+<fieldset id='carrinho'>
+<legend>Carrinho</legend>
+
+<form action="../Controller/efetuarCompraController.php" method='post'>
+<h2 >Título - Preço</h2>
+
+<?php
+require '../Model/Carrinho.php';
+$itens = new Carrinho();
+$total = $itens->mostrarCarrinho();
+
+
+?>
+<button name='valor' value='<?php echo $total;?>'>Efetuar a compra</button>
+</form>
+
+</fieldset>
+
+
 </body>
 
 <?php

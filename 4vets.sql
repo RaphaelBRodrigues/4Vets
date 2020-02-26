@@ -1,4 +1,4 @@
-
+create database egide;
 use egide;
 
 create table Usuario(
@@ -29,6 +29,7 @@ create table Carrinho(
 CarrinhoID int  auto_increment,
 LivroID int,
 UsuarioID int,
+SessaoID int,
 FOREIGN KEY(LivroID) references Livro(LivroID),
 FOREIGN KEY(UsuarioID) references Usuario(UsuarioID),
 primary key(CarrinhoID)
@@ -39,9 +40,11 @@ create table Compra(
 CompraID int  auto_increment,
 UsuarioID int,
 Total int,
+SessaoID int,
 FOREIGN KEY(UsuarioID) references Usuario(UsuarioID),
+FOREIGN KEY(SessaoID) references Carrinho(SessaoID),
 primary key(CompraID)
 
 );
 
-select * from Compra ORDER BY CompraID DESC;
+

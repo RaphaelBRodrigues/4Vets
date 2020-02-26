@@ -1,6 +1,12 @@
 #separador{
     width: 100%;
 }
+#comprarMais{
+    background-color: blue;
+}
+#verHistorico{
+    background-color: gray;
+}
 i{
     cursor: pointer;
 }

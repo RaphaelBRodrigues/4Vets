@@ -1,4 +1,5 @@
 <?php
+include_once 'config.php';
 
 class Usuario{
 
@@ -49,6 +50,7 @@ echo "Inserido".$senha;
                $_SESSION['usr'] = $user['Nome'];
                $_SESSION['usrID'] = $user['UsuarioID'];
                $_SESSION['logado'] = true;
+               $_SESSION['sessaoID'] = rand();
                
           header("location: ../index.php?status=successLog");
 
@@ -98,6 +100,8 @@ $prepare->execute();
         $_SESSION['usr'] = strtoupper($_GET['user']);
         foreach($this->pdo->query("SELECT UsuarioID FROM Usuario where UPPER(Nome) = '".$_SESSION['usr']."'") as $user){
           $_SESSION['usrID'] = $user['UsuarioID'];
+          $_SESSION['sessaoID'] = rand();
+
      }
 
         $_SESSION['logado'] = true;

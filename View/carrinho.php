@@ -30,7 +30,9 @@ $total = $itens->mostrarCarrinho();
 
 ?>
 <button name='valor' value='<?php echo $total;?>'>Efetuar a compra</button>
-</form>
+</form><br>
+<a href="catalogo.php"><button id='comprarMais'> Continuar comprando</button></a>
+<a href="compraFinalizada.php"><button id='verHistorico'> Ver histórico </button></a>
 
 </fieldset>
 

@@ -18,9 +18,10 @@ class Carrinho{
         echo "oi";
         foreach($this->pdo->query("SELECT * FROM Livro WHERE LivroID = ".$_GET['LivroID']."") as $livro){
             
-        $prepare = $this->pdo->prepare("INSERT INTO Carrinho values(null,?,?)");
+        $prepare = $this->pdo->prepare("INSERT INTO Carrinho values(null,?,?,?)");
         $prepare->bindParam(1,$_GET['LivroID']);
         $prepare->bindParam(2,$_SESSION['usrID']);
+        $prepare->bindParam(3,$_SESSION['sessaoID']);
         $prepare->execute();
         }
         if($prepare->rowCount() == 1){
@@ -35,7 +36,7 @@ class Carrinho{
             $total= 0 ;
             $quantidade = 0;
             @session_start();
-            foreach($this->pdo->query("select * from Carrinho INNER JOIN Livro where Livro.LivroID = Carrinho.LivroID and Carrinho.UsuarioID = ".$_SESSION['usrID']."") as $itens){
+            foreach($this->pdo->query("select * from Carrinho INNER JOIN Livro where Livro.LivroID = Carrinho.LivroID and Carrinho.UsuarioID = ".$_SESSION['usrID']." and Carrinho.SessaoID = ".$_SESSION['sessaoID']."") as $itens){
                 $quantidade++;
                 $total += $itens['Preco'];
                 echo "
@@ -51,6 +52,7 @@ class Carrinho{
               
                // echo "<script>alert(".$itens['LivroID'].");</script>";
             }
+            echo "<h2 id='total'>ID da sessão:".$_SESSION['sessaoID']."</h2>";
             echo "<h2 id='total'>Valor total da compra:".$total."</h2>";
             echo "<h2 id='total'>Quantidade de itens no carrinho:".$quantidade."</h2>";
             return $total;

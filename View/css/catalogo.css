@@ -19,7 +19,10 @@
     top:3em;
     position: relative;
 }
+#x{
+    color:red;
 
+}
 hr{
     width: 25%;
 }

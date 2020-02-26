@@ -39,6 +39,27 @@ public function infoLivro(){
     }
     }
 
+    public function deletarProdutoCatalogo(){
+
+        $livroID = $_GET['id'];
+        echo $livroID;
+
+        $prepare = $this->pdo->prepare("DELETE FROM Livro where LivroID = ".$livroID."");
+        $prepare->execute();
+
+        if($prepare->rowCount() == 1){
+            header("location: ../View/catalogo.php?status=delSuc");
+
+        }else{
+            header("location: ../View/catalogo.php?status=delFail");
+
+        }
+
+
+       
+
+    }
+
 public function Consultar(){
 
 
@@ -55,6 +76,9 @@ public function Consultar(){
             <small id='fi'>".$livro['Autor']."</small>
             <hr>
             </h1>
+            <form action='../Controller/deletarProdutoCatalogoController.php'>
+            <button name='id' value='".$livro['LivroID']."' class='button material-icons' id='X'>remove_circle</button>
+            </form>
             <img src='".$livro['linkImg']."' id='fileira-livro1' class='fileira-img'   alt=''>
 
             <br><br>         

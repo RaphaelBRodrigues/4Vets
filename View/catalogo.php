@@ -6,11 +6,18 @@ if($_GET['status'] == 'fail'){
     echo "<script>alert('Falha ao realizar a compra')</script>";
     unset($_GET['status']); 
 }
-if($_GET['status'] == 'failDeletar'){
+if($_GET['status'] == 'delFail'){
     //parâmetro passado pelo model usuário no momento do login
 echo "<script>alert('Falha ao deletar o livro')</script>";
 unset($_GET['status']); 
 }
+if($_GET['status'] == 'delSuc'){
+    //parâmetro passado pelo model usuário no momento do login
+echo "<script>alert('Livro deletado com sucesso')</script>";
+unset($_GET['status']); 
+}
+
+
 ?>
 <head>
     <meta charset='utf-8'> 

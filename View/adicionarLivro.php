@@ -22,6 +22,7 @@ if($_GET['status'] == 'fail'){
 
 <input required type="text" name='titulo'  placeholder="Titulo">
 <input required type="text" name='autor' placeholder="Autor">
+<textarea required type="text" name='desc' placeholder="Descrição da obra"></textarea>
 <input required type="text" name='link' placeholder="Link da imagem de capa">
 <input required type="number" step='0.5' name='preco' placeholder="Preço">
 <br><br>

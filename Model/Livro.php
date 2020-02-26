@@ -78,11 +78,12 @@ public function Consultar(){
 }
 
     public function adicionarLivro(){
-        $prepare = $this->pdo->prepare("INSERT INTO Livro values(null,?,?,?,?)");
+        $prepare = $this->pdo->prepare("INSERT INTO Livro values(null,?,?,?,?,?)");
         $prepare->bindParam(1,$_GET['titulo']);
         $prepare->bindParam(2,$_GET['autor']);
         $prepare->bindParam(3,$_GET['link']);
-        $prepare->bindParam(4,$_GET['preco']);
+        $prepare->bindParam(4,$_GET['desc']);
+        $prepare->bindParam(5,$_GET['preco']);
         $prepare->execute();
         if($prepare->rowCount() == 1){
            header("location: ../View/catalogo.php");

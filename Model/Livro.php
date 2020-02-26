@@ -69,7 +69,11 @@ if($prepare->rowCount() == 1){
 }
 
 public function infoLivro(){
+
     foreach($this->pdo->query("SELECT * FROM Livro where LivroID = ".$_GET['idLivro']."") as $livro){
+      if(empty($livro['linkImg'])){
+      $livro['linkImg'] = 'https://cdn4.iconfinder.com/data/icons/modern-education-01-line/128/ebook-reading_knowledge_publishing_student_education_template_reading_book_tablet_hold-512.png';
+      }
       echo "
 
    <h1>   Nome do livro: ".$livro['Titulo']."</h1>

@@ -24,7 +24,7 @@ if(@$_GET['status'] == 'failCad'){
             <img src='' id='livro1' class='destaque-img'  onmouseover='dentro(this.id)'  alt="">
             <br><br>
             <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
-              <button class='button'> <i class='material-icons'>info</i> </button>
+              <button id='6' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
 
         </center>
     </div>
@@ -39,7 +39,7 @@ if(@$_GET['status'] == 'failCad'){
             <img src='' id='livro2' class='destaque-img'  onmouseover='dentro(this.id)'  alt="">
             <br><br>
             <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
-            <button class='button'> <i class='material-icons'>info</i> </button>
+            <button id='7' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
 
         </center>
     </div>
@@ -55,3 +55,4 @@ if(@$_GET['status'] == 'failCad'){
 include("templates/footer.php");
 ?>
     <script src='js/livros.js'></script>
+    <script src='js/infoCat.js'></script>

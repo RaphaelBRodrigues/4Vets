@@ -85,7 +85,7 @@ if(@$_SESSION['logado'] == 1){
             <img src='' id='livro1' class='destaque-img'  onmouseover='dentro(this.id)'  alt="">
             <br><br>
             <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
-              <button id='5' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
+              <button id='6' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
 
         </center>
     </div>
@@ -100,7 +100,7 @@ if(@$_SESSION['logado'] == 1){
             <img src='' id='livro2' class='destaque-img'  onmouseover='dentro(this.id)'  alt="">
             <br><br>
             <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
-            <button  id='6' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
+            <button  id='7' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
 
         </center>
     </div>
@@ -126,7 +126,7 @@ if(@$_SESSION['logado'] == 1){
             <img src='https://images-na.ssl-images-amazon.com/images/I/71OFqSRFDgL.jpg' id='catalogo-livro1' class='catalogo-img'   alt="">
             <br><br>
             <a href="View/catalogo.php">   <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
-              <button class='button' id='2' onclick='info(this.id)''> <i class='material-icons'>info</i> </button>
+              <button class='button' id='2' onclick='info(this.id)'> <i class='material-icons'>info</i> </button>
 
         </center>
     </div>
@@ -157,7 +157,7 @@ if(@$_SESSION['logado'] == 1){
             <img src='https://www.companhiadasletras.com.br/images/livros/85050_gg.jpg' id='catalogo-livro3' class='catalogo-img'   alt="">
             <br><br>
             <a href="View/catalogo.php">    <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
-              <button id='3' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
+              <button id='4' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
 
         </center>
     </div>
@@ -172,7 +172,7 @@ if(@$_SESSION['logado'] == 1){
             <img src='https://images-na.ssl-images-amazon.com/images/I/51DLakKYLVL.jpg' id='catalogo-livro4' class='catalogo-img'   alt="">
             <br><br>
             <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
-            <button id='4' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
+            <button id='5' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
 
         </center>
     </div>

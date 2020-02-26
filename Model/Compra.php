@@ -25,7 +25,11 @@ class Compra{
         @session_start();
        foreach($this->pdo->query("select * from Compra Where UsuarioID = ".$_SESSION['usrID']." ORDER BY CompraID DESC") as $compra){
 
-echo "
+echo "<br><br>
+<fieldset id='compra'>
+<legend>Histórico</legend>
+
+
 <input readonly  type='text' name='compraID' placeholder='ID' value='ID:".$compra['SessaoID']."'><span class='material-icons'>fingerprint</span> <br>
 ";
 
@@ -38,12 +42,14 @@ echo "<br>
 
 echo "<ul> <h3>Itens:</h3> ";
 
-foreach($this->pdo->query("select * from Carrinho INNER JOIN Livro Where SessaoID = ".$compra['SessaoID']."") as $itens){
-        echo "<li>".$itens['Titulo'].".</li>";
-       
-    
-    }
-    echo "</ul> <hr>
+
+foreach($this->pdo->query("SELECT * FROM Carrinho INNER JOIN Livro Where Carrinho.SessaoID = ".$compra['SessaoID']." and Carrinho.LivroID = Livro.LivroID") as $itens){
+    echo "<li>".$itens['Titulo']."</li>";
+}
+
+
+    echo "</ul> </fieldset>
+
     ";
 
 

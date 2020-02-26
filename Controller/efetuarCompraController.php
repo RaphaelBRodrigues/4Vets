@@ -4,7 +4,10 @@ require '../Model/Compra.php';
 
 $livro = new Compra();
 
-echo $_POST['valor'];
+if($_POST['valor'] == 0){
+    header("location: ../View/catalogo.php");
+}
+
 echo $livro->efetuarCompra();
 
 

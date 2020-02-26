@@ -1,8 +1,9 @@
 <?php
 include("templates/nav.php");
-if($_GET['status'] == 'failCad'){
+@session_start();
+if($_SESSION['usrID'] == ''){
         //parâmetro passado pelo model usuário no momento do login
-    echo "<script>alert('Falha ao realizar o cadastro')</script>";
+    echo "<script>alert('Faça o login no sistema'); window.location.href = 'login.php';</script>";
     unset($_GET['status']); 
 }
 ?>
@@ -31,7 +32,7 @@ $total = $itens->mostrarCarrinho();
 ?>
 <button name='valor' value='<?php echo $total;?>'>Efetuar a compra</button>
 </form><br>
-<a href="catalogo.php"><button id='comprarMais'> Continuar comprando</button></a>
+<a href="catalogo.php"><button id='comprarMais'> Continuar comprando</button></a><br><br>
 <a href="compraFinalizada.php"><button id='verHistorico'> Ver histórico </button></a>
 
 </fieldset>

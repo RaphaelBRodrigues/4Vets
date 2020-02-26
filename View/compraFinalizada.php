@@ -18,8 +18,8 @@ unset($_GET['status']);
 </head>
 <body>
     
-<fieldset id='compra'>
-<legend>Histórico de compras</legend>
+
+
 
 <?php
 require '../Model/Compra.php';
@@ -28,7 +28,6 @@ $consulta->consultarCompra();
 ?>
 
    
-</fieldset>
 </body>
 <?php
 include("templates/footer.php");

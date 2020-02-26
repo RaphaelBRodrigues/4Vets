@@ -1,5 +1,9 @@
 #compra{
     top: 5em;
+    margin-top: 5em;
+    position: relative;
+    margin-bottom: 2em;
+    bottom: 2em;
 }
 hr{
     width: 100%;

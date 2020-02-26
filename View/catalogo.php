@@ -1,4 +1,5 @@
 <?php
+
 include("templates/nav.php");
 if($_GET['status'] == 'fail'){
         //parâmetro passado pelo model usuário no momento do login
@@ -12,6 +13,7 @@ unset($_GET['status']);
 }
 ?>
 <head>
+    <meta charset='utf-8'> 
 
 
     <link rel="stylesheet" href="css/catalogo.css">

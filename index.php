@@ -3,7 +3,7 @@
 <head>
 
 <?php
-if(empty($_SESSION['usrID'] == true)){
+if(@empty($_SESSION['usrID'] == true)){
 
 @session_destroy();
 $linkLogin = 'View/login.php';
@@ -12,7 +12,7 @@ $linkLogin = 'View/login.php';
 }
 @session_start();
 //echo "<script>alert(".$_SESSION['usrID'].");</script>";
-if($_SESSION['logado'] == 1){
+if(@$_SESSION['logado'] == 1){
     $log = "verified_user";
     $linkLogin = "Controller/ConsultarUsuarioController.php";
 
@@ -21,7 +21,7 @@ if($_SESSION['logado'] == 1){
     $log = 'person_pin';
 }
 // if($_GET['status'] == 'successCad'){
-//     unset($_GET['status']); 
+//     unset($_GET['status']);
 
 //     //parâmetro passado pelo model usuário no momento do cadastro
 
@@ -29,7 +29,7 @@ if($_SESSION['logado'] == 1){
 // if($_GET['status'] == 'successLog'){
 //         //parâmetro passado pelo model usuário no momento do login
 //     echo "<script>alert('Login efetuado com sucesso')</script>";
-//     unset($_GET['status']); 
+//     unset($_GET['status']);
 // }
 ?>
 
@@ -50,20 +50,20 @@ if($_SESSION['logado'] == 1){
 <body>
     <nav id='menu'>
         <ul id='menu-list'>
-   <li>  <a class='menu-item log' href="#"><span id='logo'>Sob a Égide</span> </a> <button class='material-icons retratil button' onclick='retrair()'>menu</button></li> 
+   <li>  <a class='menu-item log' href="#"><span id='logo'>Sob a Égide</span> </a> <button class='material-icons retratil button' onclick='retrair()'>menu</button></li>
    <li>  <a class='menu-item invisivel' href="#" id='home'><i> Home </i></a></li>
    <li>  <a class='menu-item invisivel' id='novidades' href="View/novidades.php"><i> Novidades </i></a></li>
    <li>  <a class='menu-item invisivel' id='catalogos' href="View/catalogo.php"><i> Catálogo </i></a></li>
    <li>  <a class='menu-item invisivel' id='contatos' href="View/contatos.php"><i> Contatos </i></a></li>
-    
-   <li><a href="View/carrinho.php"> <i class='menu-item material-icons invisivel' id='menu-shop'>shopping_cart</i></a></li>
-   <li><a href="<?php echo $linkLogin;?>"><i class='menu-item material-icons invisivel' id='menu-login'><?php echo $log; ?></i></a></li>
+
+   <li><a href="View/carrinho.php"> <i title='Carrinho' class='menu-item material-icons invisivel' id='menu-shop'>shopping_cart</i></a></li>
+   <li><a href="<?php echo $linkLogin;?>"><i  title='Usuário' class='menu-item material-icons invisivel' id='menu-login'><?php echo $log; ?></i></a></li>
 </ul>
-   
+
     </nav>
 
     <div id='main'>
-        
+
         <div id='main-escuro'>
         <center>
         <h1 id='main-text' ></h1>
@@ -74,11 +74,11 @@ if($_SESSION['logado'] == 1){
     <h1 id='novidades' class='bar'>Ultímas Aquisições</h1>
 
     <div id='destaques'>
-    
+
     <div class='destaque-bloco' id='destaques-bloco-1'>
         <center>
-            <h2 class='destaque-titulo'>Os irmãos Karamazov   
-             <br>    
+            <h2 class='destaque-titulo'>Os irmãos Karamazov
+             <br>
             <small id='fi'>Fiódor Dostoiévski</small>
             <hr>
             </h2>
@@ -92,8 +92,8 @@ if($_SESSION['logado'] == 1){
 
     <div class='destaque-bloco' id='destaques-bloco-2'>
         <center>
-            <h2 class='destaque-titulo'>A Guerra dos mundos   
-             <br>    
+            <h2 class='destaque-titulo'>A Guerra dos mundos
+             <br>
             <small id='fi'>H.G Wells</small>
             <hr>
             </h2>
@@ -101,25 +101,25 @@ if($_SESSION['logado'] == 1){
             <br><br>
             <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
             <button  id='6' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
-            
+
         </center>
     </div>
-    
 
 
-    
+
+
     </div>
 
-   
+
     <h1 id='catalogo' class='bar'>Catálogo</h1>
 
 
     <div id='catalogo'>
-    
+
     <div class='catalogo-bloco' id='catalogo-bloco-1'>
         <center>
-            <h2 class='catalogo-titulo'>Fahrenheit 451  
-             <br>    
+            <h2 class='catalogo-titulo'>Fahrenheit 451
+             <br>
             <small id='fi'>Ray Bradbury</small>
             <hr>
             </h2>
@@ -133,8 +133,8 @@ if($_SESSION['logado'] == 1){
 
     <div class='catalogo-bloco' id='catalogo-bloco-2'>
         <center>
-            <h2 class='catalogo-titulo'>1984   
-             <br>    
+            <h2 class='catalogo-titulo'>1984
+             <br>
             <small id='fi'>George Orwell</small>
             <hr>
             </h2>
@@ -142,15 +142,15 @@ if($_SESSION['logado'] == 1){
             <br><br>
             <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
             <button id='1' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
-            
+
         </center>
     </div>
-    
+
 
     <div class='catalogo-bloco' id='catalogo-bloco-1'>
         <center>
-            <h2 class='catalogo-titulo'>Íliada   
-             <br>    
+            <h2 class='catalogo-titulo'>Íliada
+             <br>
             <small id='fi'>Homero</small>
             <hr>
             </h2>
@@ -164,8 +164,8 @@ if($_SESSION['logado'] == 1){
 
     <div class='catalogo-bloco' id='catalogo-bloco-2'>
         <center>
-            <h2 class='catalogo-titulo'>A Divina comédia  
-             <br>    
+            <h2 class='catalogo-titulo'>A Divina comédia
+             <br>
             <small id='fi'>Dante Alighieri</small>
             <hr>
             </h2>
@@ -173,11 +173,11 @@ if($_SESSION['logado'] == 1){
             <br><br>
             <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
             <button id='4' onclick='info(this.id)' class='button'> <i class='material-icons'>info</i> </button>
-            
+
         </center>
     </div>
-    
-    
+
+
     </div>
     <center>
     <button class='button' id='ver-mais'><a href="View/catalogo.php" class='menu-item'> Ver mais <span id='olho' class='material-icons'>visibility</span> </a> </button>
@@ -190,7 +190,7 @@ if($_SESSION['logado'] == 1){
 
     <fieldset>
         <legend>Email</legend>
-        
+
         <center>
         <input  type="email" required ame="email" placeholder="Email">
         <sup class='material-icons'>mail</sup>

@@ -1,9 +1,9 @@
 <?php
 include("templates/nav.php");
-if($_GET['status'] == 'failCad'){
+if(@$_GET['status'] == 'failCad'){
         //parâmetro passado pelo model usuário no momento do login
     echo "<script>alert('Falha ao realizar o cadastro')</script>";
-    unset($_GET['status']); 
+    unset($_GET['status']);
 }
 ?>
 <head>
@@ -26,7 +26,7 @@ if($_GET['status'] == 'failCad'){
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190028.2570931247!2d12.395912211157928!3d41.910241488095714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2zUm9tYSwgSXTDoWxpYQ!5e0!3m2!1spt-BR!2sbr!4v1582737659490!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
 </center>
-    
+
 </body>
 
 <?php

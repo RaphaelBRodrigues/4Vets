@@ -8,17 +8,27 @@ class Compra{
 
     function __construct()
     {
-        $this->pdo = new PDO("mysql:host=127.0.0.1;dbname=egide","root","password");
-        
+        $this->pdo = new PDO("mysql:host=127.0.0.1;dbname=egide","egide","password");
+
     }
 
     public function efetuarCompra(){
         @session_start();
-        $total = $_POST['valor'];
+        if($_POST['valor'] != 0){
+          $total = $_POST['valor'];
+
+        }else{
+          header("location:../View/catalogo.php?status=totInv");
+
+        }
       $prepare = $this->pdo->prepare("INSERT INTO Compra(Total,UsuarioID,SessaoID) values(".$total.",".$_SESSION['usrID'].",".$_SESSION['sessaoID'].")");
     $prepare->execute();
-    $prepare->rowCount();
+  if($prepare->rowCount() == 1){
     header("location:../View/compraFinalizada.php");
+  }else{
+    header("location:../View/carrinho.php?status=totInv");
+
+  }
     }
 
     public function consultarCompra(){

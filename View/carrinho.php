@@ -4,7 +4,12 @@ include("templates/nav.php");
 if($_SESSION['usrID'] == ''){
         //parâmetro passado pelo model usuário no momento do login
     echo "<script>alert('Faça o login no sistema'); window.location.href = 'login.php';</script>";
-    unset($_GET['status']); 
+    unset($_GET['status']);
+}
+if(@$_GET['status'] == 'totInv'){
+        //parâmetro passado pelo model usuário no momento do login
+    echo "<script>alert('Falha ao realizar a compra,o carrinho está vazio')</script>";
+    unset($_GET['status']);
 }
 ?>
 <head>
@@ -13,7 +18,7 @@ if($_SESSION['usrID'] == ''){
     <link rel="stylesheet" href="css/carrinho.css">
 </head>
 <body>
-    
+
 
 
 

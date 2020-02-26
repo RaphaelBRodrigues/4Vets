@@ -8,8 +8,8 @@ private $pdo;
 
 function __construct()
 {
-    $this->pdo = new PDO("mysql:host=127.0.0.1;dbname=egide","root","password");
-    
+    $this->pdo = new PDO("mysql:host=127.0.0.1;dbname=egide","egide","password");
+
 }
 
 public function Consultar(){
@@ -20,7 +20,7 @@ public function Consultar(){
      if($_GET['funcao'] == 'recuperar'){
           foreach($this->pdo->query("SELECT * FROM Usuario where UPPER(Nome) = '".$usuarioNome."' ") as $user){
                return $user['Hint'];
-          }     
+          }
      }
      foreach($this->pdo->query("SELECT * FROM Usuario where UsuarioID = ".$_SESSION['usrID']."") as $user){
 
@@ -51,13 +51,13 @@ echo "Inserido".$senha;
                $_SESSION['usrID'] = $user['UsuarioID'];
                $_SESSION['logado'] = true;
                $_SESSION['sessaoID'] = rand();
-               
+
           header("location: ../index.php?status=successLog");
 
               return "FOOOOOOOOOOOOOOOOOOOOOOOOOI ";
          // break;
 
-          
+
      }else if($_SESSION['logado'] != true){
           $_SESSION['logado'] = false;
 
@@ -71,11 +71,11 @@ echo "Inserido".$senha;
 
      $_SESSION['logado'] = false;
 
-    
+
 
     }
 
-      
+
 }
 header("location: ../View/login.php?status=FailLog");
 return "Falhou";
@@ -92,7 +92,7 @@ public function Cadastrar(){
     $prepare->bindParam(5,$_GET['ncasa']);
     $prepare->bindParam(6,$_GET['pass']);
     $prepare->bindParam(7,$_GET['user']);
-     $prepare->bindParam(8,$_GET['hint']);    
+     $prepare->bindParam(8,$_GET['hint']);
 
 $prepare->execute();
      if($prepare->rowCount() == 1){
@@ -112,13 +112,13 @@ $prepare->execute();
         header("location: ../View/cadastro.php?status=failCad");
 
      }
-    
+
 
 }
 
 
 
 
-    
+
 }
 ?>

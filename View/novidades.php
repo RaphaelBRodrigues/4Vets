@@ -1,9 +1,9 @@
 <?php
 include("templates/nav.php");
-if($_GET['status'] == 'failCad'){
+if(@$_GET['status'] == 'failCad'){
         //parâmetro passado pelo model usuário no momento do login
     echo "<script>alert('Falha ao realizar o cadastro')</script>";
-    unset($_GET['status']); 
+    unset($_GET['status']);
 }
 ?>
 <head>
@@ -13,11 +13,11 @@ if($_GET['status'] == 'failCad'){
 <body>
 
  <div id='destaques' class='bloco'>
-    
+
     <div class='destaque-bloco' id='destaques-bloco-1'>
         <center>
-            <h2 class='destaque-titulo'>Os irmãos Karamazov   
-             <br>    
+            <h2 class='destaque-titulo'>Os irmãos Karamazov
+             <br>
             <small id='fi'>Fiódor Dostoiévski</small>
             <hr>
             </h2>
@@ -31,8 +31,8 @@ if($_GET['status'] == 'failCad'){
 
     <div class='destaque-bloco' id='destaques-bloco-2'>
         <center>
-            <h2 class='destaque-titulo'>A Guerra dos mundos   
-             <br>    
+            <h2 class='destaque-titulo'>A Guerra dos mundos
+             <br>
             <small id='fi'>H.G Wells</small>
             <hr>
             </h2>
@@ -40,15 +40,15 @@ if($_GET['status'] == 'failCad'){
             <br><br>
             <a href="View/catalogo.php">  <button class='button'> <i class='material-icons'>shopping_cart</i> </button></a>
             <button class='button'> <i class='material-icons'>info</i> </button>
-            
+
         </center>
     </div>
-    
 
 
-    
+
+
     </div>
-    
+
 </body>
 
 <?php

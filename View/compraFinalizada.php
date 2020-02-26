@@ -1,14 +1,14 @@
 <?php
 include("templates/nav.php");
-if($_GET['status'] == 'fail'){
+if(@$_GET['status'] == 'fail'){
         //parâmetro passado pelo model usuário no momento do login
     echo "<script>alert('Falha ao realizar a compra')</script>";
-    unset($_GET['status']); 
+    unset($_GET['status']);
 }
-if($_GET['status'] == 'failDeletar'){
+if(@$_GET['status'] == 'failDeletar'){
     //parâmetro passado pelo model usuário no momento do login
 echo "<script>alert('Falha ao deletar o livro')</script>";
-unset($_GET['status']); 
+unset($_GET['status']);
 }
 ?>
 <head>
@@ -17,7 +17,7 @@ unset($_GET['status']);
     <link rel="stylesheet" href="css/compraFinalizada.css">
 </head>
 <body>
-    
+
 
 
 
@@ -27,7 +27,7 @@ $consulta = new Compra();
 $consulta->consultarCompra();
 ?>
 
-   
+
 </body>
 <?php
 include("templates/footer.php");

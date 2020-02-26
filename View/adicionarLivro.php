@@ -1,9 +1,9 @@
 <?php
 include("templates/nav.php");
-if($_GET['status'] == 'fail'){
+if(@$_GET['status'] == 'fail'){
         //parâmetro passado pelo model usuário no momento do login
     echo "<script>alert('Falha ao realizar o cadastro do livro')</script>";
-    unset($_GET['status']); 
+    unset($_GET['status']);
 }
 ?>
 <head>
@@ -13,17 +13,17 @@ if($_GET['status'] == 'fail'){
 </head>
 
 <body>
-    
+
 <center>
 <fieldset id='login'>
-<legend>Login</legend>
+<legend>Adicionar Livro</legend>
 
 <form action="../Controller/CadastroLivroController.php" method='get'>
 
 <input required type="text" name='titulo'  placeholder="Titulo">
 <input required type="text" name='autor' placeholder="Autor">
 <textarea required type="text" name='desc' placeholder="Descrição da obra"></textarea>
-<input required type="text" name='link' placeholder="Link da imagem de capa">
+<input  type="text" name='link' placeholder="Link da imagem de capa">
 <input required type="number" step='0.5' name='preco' placeholder="Preço">
 <br><br>
 <button id='cadastro' type="submit">Cadastrar</button><b></b>

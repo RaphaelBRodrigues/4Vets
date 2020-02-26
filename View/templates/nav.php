@@ -1,6 +1,6 @@
 <?php
 @session_start();
-if($_SESSION['logado']){
+if(@$_SESSION['logado']){
     $log = 'verified_user';
     $linkLogin = '../Controller/ConsultarUsuarioController.php';
 
@@ -30,16 +30,16 @@ echo "
 <body>
     <nav id='menu'>
     <ul id='menu-list'>
-    <li>  <a class='menu-item log' href='../index.php'><span id='logo'>Sob a Égide</span> </a> <button class='material-icons retratil button' onclick='retrair()'>menu</button></li> 
+    <li>  <a class='menu-item log' href='../index.php'><span id='logo'>Sob a Égide</span> </a> <button class='material-icons retratil button' onclick='retrair()'>menu</button></li>
     <li>  <a class='menu-item invisivel' href='../index.php' id='home'><i> Home </i></a></li>
     <li>  <a class='menu-item invisivel' id='novidades' href='novidades.php'><i> Novidades </i></a></li>
     <li>  <a class='menu-item invisivel' id='catalogos' href='catalogo.php'><i> Catálogo </i></a></li>
     <li>  <a class='menu-item invisivel' id='contatos' href='contatos.php'><i> Contatos </i></a></li>
-     
+
     <li><a href='carrinho.php'> <i class='menu-item material-icons invisivel' id='menu-shop'>shopping_cart</i></a></li>
     <li><a href='".$linkLogin."'><i class='menu-item material-icons invisivel' id='menu-login'> ".$log."</i></a></li>
  </ul>
-   
+
     </nav>
 
 

@@ -6,10 +6,10 @@ if(isset($_SESSION['usr'])){
     window.location.href = ../index.php ;
     </script>";
 }
-if($_GET['status'] == 'FailSenha' ){
+if(@$_GET['status'] == 'FailSenha' ){
 echo "<script>alert('Senha inválida')</script>";
 }
-if($_GET['status'] == 'FailLog' ){
+if(@$_GET['status'] == 'FailLog' ){
     echo "<script>alert('Credenciais inválidas')</script>";
     }
 ?>
@@ -18,7 +18,7 @@ if($_GET['status'] == 'FailLog' ){
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    
+
 <center>
 
 <fieldset id='login'>
@@ -45,5 +45,3 @@ if($_GET['status'] == 'FailLog' ){
 <?php
 include("templates/footer.php");
 ?>
-
-

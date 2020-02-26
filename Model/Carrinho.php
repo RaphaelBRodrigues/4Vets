@@ -8,8 +8,8 @@ class Carrinho{
 
     function __construct()
     {
-        $this->pdo = new PDO("mysql:host=127.0.0.1;dbname=egide","root","password");
-        
+        $this->pdo = new PDO("mysql:host=127.0.0.1;dbname=egide","egide","password");
+
     }
 
 
@@ -17,7 +17,7 @@ class Carrinho{
         @session_start();
         echo "oi";
         foreach($this->pdo->query("SELECT * FROM Livro WHERE LivroID = ".$_GET['LivroID']."") as $livro){
-            
+
         $prepare = $this->pdo->prepare("INSERT INTO Carrinho values(null,?,?,?)");
         $prepare->bindParam(1,$_GET['LivroID']);
         $prepare->bindParam(2,$_SESSION['usrID']);
@@ -28,7 +28,7 @@ class Carrinho{
         header("location: ../View/carrinho.php");
         }else{
             header("location: ../View/catalogo.php?status=fail");
-          
+
         }
         }
 
@@ -40,16 +40,16 @@ class Carrinho{
                 $quantidade++;
                 $total += $itens['Preco'];
                 echo "
-                
-              <h3 id='nome'>  ".$itens['Titulo']."(".$itens['Autor'].")</h3> 
+
+              <h3 id='nome'>  ".$itens['Titulo']."(".$itens['Autor'].")</h3>
               <p id='preco'> R$".$itens['Preco']." <br> </p>
               <i class='material-icons' id='x' onclick='deletar(".$itens['CarrinhoID'].")' id='deletar' >remove_circle</i>
 <hr id='separador'>
                 ";
-                
-                
-                
-              
+
+
+
+
                // echo "<script>alert(".$itens['LivroID'].");</script>";
             }
             echo "<h2 id='total'>ID da sessão:".$_SESSION['sessaoID']."</h2>";
@@ -66,10 +66,10 @@ class Carrinho{
 
             $prepare = $this->pdo->prepare("DELETE FROM Carrinho where CarrinhoID = ".$itemID."");
             $prepare->execute();
-            
+
                 header("location: ../View/carrinho.php?");
 
-           
+
 
         }
 }

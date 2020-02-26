@@ -81,7 +81,7 @@ background-color: rgba(0,0,0,0.5);
 #main-text{
     text-transform: uppercase;
     font-family: 'Varela Round' ;
-font-style: oblique;   
+font-style: oblique;
  text-shadow: 5px 5px 5px black;;
 padding-top: 1.5em;
     color:white;
@@ -91,12 +91,12 @@ padding-top: 1.5em;
 #destaques{
     width: 100%;
     display: table;
-  
+
 }
 #catalogo{
     width: 100%;
     display: table;
-  
+
 }
 hr{
     width: 50%;
@@ -106,7 +106,7 @@ hr{
     position: relative;
     margin-left: auto;
     margin-right:auto;
-   
+
 }
 .destaque-titulo{
     font-family: 'Montserrat' ;
@@ -164,7 +164,7 @@ hr{
         box-shadow: 5px 5px 5px black;
         height: 23em;
         transition-duration: 0.9s;
-    
+
 }
 .catalogo-img:hover{
 transform:scale(1.2);
@@ -251,7 +251,7 @@ fieldset button{
 */
 
 @media screen and (max-width:1351px) and (min-width: 1090px){
-  
+
     #menu-shop{
 
         left: 8em;
@@ -263,7 +263,7 @@ fieldset button{
 
 @media screen and (max-width:1088px) {
 
-    
+
     #menu-shop{
 margin-top: 0.3em;
         left: -1.8em;
@@ -273,7 +273,7 @@ margin-top: 0.3em;
         left: -2.6em;
     }
 
- 
+
 
 
 .destaque-bloco{
@@ -281,7 +281,7 @@ margin-top: 0.3em;
     position: relative;
     margin-left: auto;
     margin-right:auto;
-   
+
 }
 .catalogo-bloco{
     display:block;
@@ -292,7 +292,7 @@ margin-top: 0.3em;
 
 #main-text{
     width: 100%;
-padding-top: 3.5em;
+padding-top: 2.5em;
     color:white;
     z-index: 999;
     font-size: 2.1em;
@@ -335,14 +335,14 @@ height: 35vh;
     top: 1em;
 font-size: 2.1em;
 float: left;
-    
+
 }
 .retratil{
     display: table-cell;
 margin-top: -1.2em;
 margin-right: 0.5em;
-float: right;   
-   
+float: right;
+
 }
 .log{
     margin-top: 3em;

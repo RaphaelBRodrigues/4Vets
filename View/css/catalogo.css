@@ -14,6 +14,10 @@
 .fileira-bloco .material-icons{
     font-size: 2.5em;
 }
+#atualizar{
+  background-color: yellow;
+  color:gray;
+}
 #linha{
     display:table;
     top:3em;
@@ -35,7 +39,7 @@ hr{
         box-shadow: 5px 5px 5px black;
         height: 26em;
         transition-duration: 0.9s;
-    
+
 }
 .fileira-img:hover{
 transform:scale(1.2);

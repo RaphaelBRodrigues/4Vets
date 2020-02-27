@@ -33,6 +33,10 @@ class Compra{
 
     public function consultarCompra(){
         @session_start();
+        if($_GET['hist'] != 1){
+        $_SESSION['sessaoID'] = rand();
+
+       }
        foreach($this->pdo->query("select * from Compra Where UsuarioID = ".$_SESSION['usrID']." ORDER BY CompraID DESC") as $compra){
 
 echo "<br><br>
@@ -64,7 +68,7 @@ foreach($this->pdo->query("SELECT * FROM Carrinho INNER JOIN Livro Where Carrinh
 
 
         }
-        $_SESSION['sessaoID'] = rand();
-       }
+
+}
 }
     ?>

@@ -25,7 +25,7 @@ if(@$_GET['status'] == 'totInv'){
 <fieldset id='carrinho'>
 <legend>Carrinho</legend>
 
-<form action="../Controller/efetuarCompraController.php" method='post'>
+<form action="../Controller/efetuarCompraController.php?fim=1" method='post'>
 <h2 >Título - Preço</h2>
 
 <?php
@@ -38,7 +38,7 @@ $total = $itens->mostrarCarrinho();
 <button name='valor' value='<?php echo $total;?>'>Efetuar a compra</button>
 </form><br>
 <a href="catalogo.php"><button id='comprarMais'> Continuar comprando</button></a><br><br>
-<a href="compraFinalizada.php"><button id='verHistorico'> Ver histórico </button></a>
+<a href="compraFinalizada.php?hist=1"><button id='verHistorico'> Ver histórico </button></a>
 
 </fieldset>
 

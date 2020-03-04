@@ -1,8 +1,8 @@
-# 4Vets
+# Sob a Égide
 
 <h1>Executar o projeto</h1>
 
--Execute a query 4vets.sql em um SGBD MySQL. <br/>
+-Execute a query egide.sql em um SGBD MySQL. <br/>
 -Mova os arquivos do projeto para um servidor HTTP(Apache...)<br/>
 -Utilize a aplicação.<br/>
 <br/><br/>
